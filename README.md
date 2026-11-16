@@ -1,6 +1,10 @@
 # cd-bridge
 
-Placeholder repository for `cd-bridge`.
+`cd-bridge` is an independent companion/bridge project.
+
+## License
+
+`cd-bridge` is released under the **MIT License** (see [LICENSE](LICENSE)).
 
 ## Status
 
