@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpu-status"
+version = "0.1.0"
+description = "A terminal status monitor for the Kindi local LLM server"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "JugglerMaster"}]
+keywords = ["kindi", "monitor", "gpu", "llm", "status"]
+
+[project.scripts]
+gpu-status = "gpu_status:main"
+
+[tool.setuptools]
+py-modules = ["gpu_status"]
