@@ -11,27 +11,49 @@ It is an **independent** implementation — it talks to Kindi's public
 
 Released under the **MIT License** (see [LICENSE](LICENSE)).
 
-## Quick start
+## Install (single command)
+
+The script is stdlib-only (no dependencies), so the installer just drops an
+executable `gpu-status` into your `~/.local/bin`. Run it from the repo:
+
+```sh
+git clone https://github.com/JugglerMaster/gpu-status.git
+cd gpu-status
+./install.sh
+```
+
+Or as a single line (it clones itself):
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/JugglerMaster/gpu-status/main/install.sh | bash
+```
+
+After that, `gpu-status` is on your PATH:
+
+```sh
+gpu-status --watch 2
+```
+
+## Usage
 
 ```sh
 # one-shot against the default Kindi server (127.0.0.1:8093)
-python3 gpu_status.py
+gpu-status
 
 # refresh every 2 seconds
-python3 gpu_status.py --watch 2
+gpu-status --watch 2
 
 # a remote Kindi server
-python3 gpu_status.py --host 0.0.0.0 --port 8093
+gpu-status --host 0.0.0.0 --port 8093
 
 # raw /health JSON
-python3 gpu_status.py --json
+gpu-status --json
 ```
 
-Or install it as a command:
+You can also run the script directly without installing:
 
 ```sh
-pip install .
-gpu-status --watch 2
+python3 gpu_status.py --watch 2
 ```
 
 ## Options
