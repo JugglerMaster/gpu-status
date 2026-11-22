@@ -25,7 +25,7 @@ import time
 import urllib.error
 import urllib.request
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 DEFAULT_HOST = "127.0.0.1"
 DEFAULT_PORT = "8093"
 TIMEOUT = 2.0
@@ -101,7 +101,7 @@ def bar(pct: float, width: int = 24) -> str:
 
 
 def clear_screen() -> None:
-    if os.isatty(sys.stdout):
+    if sys.stdout.isatty():
         sys.stdout.write("\033[2J\033[H")
         sys.stdout.flush()
 
